@@ -22,7 +22,7 @@ The before reports were run against `tower_maintenance_original.py`, the exact o
 
 The seven Flake8 findings were distributed across the actual fixes without duplicating changes: the three lines also over Pylint's 100-character limit were wrapped in the Pylint commit; the pickle snapshot line was eliminated in the Bandit commit; and the remaining three genuine Flake8 issues (E303, E501 on the risk query line, and E225 on the `total` assignment) were fixed in the Flake8 commit. The Pylint-stage version still scored 10.00/10 with those three Flake8-only findings present; the Bandit-stage version reported no Bandit issues and retained the three style findings; the final Flake8 stage cleared them.
 
-The six final verification reports are `pylint_before_verified_actual.txt`, `pylint_after_verified_actual.txt`, `bandit_before_verified_actual.txt`, `bandit_after_verified_actual.txt`, `flake8_before_verified_actual.txt`, and `flake8_after_verified_actual.txt`. The older `*_before.txt` and `*_after.txt` files were preserved from the earlier offline attempt; their contents state that the analyzers were unavailable and are not the verified results.
+The six final verification reports are `pylint_before_verified_actual.txt`, `pylint_after_verified_actual.txt`, `bandit_before_verified_actual.txt`, `bandit_after_verified_actual.txt`, `flake8_before_verified_actual.txt`, and `flake8_after_verified_actual.txt`.
 
 The handout PDF contains no reflection-question text, although it lists reflection as a deliverable. See `reflection.md` for the work-based reflection; it does not invent or answer absent questions.
 
