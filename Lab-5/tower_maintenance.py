@@ -1,7 +1,6 @@
 """Track maintenance activity for telecom towers."""
 
 from collections import Counter
-import pickle
 import sqlite3
 
 
@@ -14,15 +13,14 @@ conn.execute(
         faults INTEGER
     )"""
 )
-NOC_PASSWORD = "tower-noc-77"
 SERVICE_COUNT = Counter()
 
 
 def add_tower(site, last_service, faults=0):
     """Add a tower record."""
     conn.execute(
-        f"INSERT INTO towers (site, last_service, faults) "
-        f"VALUES ('{site}', {last_service}, {faults})"
+        "INSERT INTO towers (site, last_service, faults) VALUES (?, ?, ?)",
+        (site, last_service, faults),
     )
     conn.commit()
 
@@ -57,7 +55,7 @@ def risk_level(tower_id):
 
 def snapshot():
     """Return a snapshot of all tower rows."""
-    return pickle.loads(pickle.dumps(conn.execute("SELECT * FROM towers").fetchall()))
+    return conn.execute("SELECT * FROM towers").fetchall()
 
 
 def main():
