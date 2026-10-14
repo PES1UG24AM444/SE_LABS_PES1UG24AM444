@@ -1,0 +1,5 @@
+BASELINE NOT RUN: Flake8 was not installed in the supplied Python 3.11.9 environment.
+Command attempted: python -m flake8 --version
+Result: No module named flake8
+Installation attempted in ignored .venv: python -m pip install pylint bandit flake8
+Result: PyPI DNS resolution failed (getaddrinfo failure). No findings are available.
