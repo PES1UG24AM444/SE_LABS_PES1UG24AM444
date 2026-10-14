@@ -1,0 +1,67 @@
+[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[main]	INFO	running on Python 3.11.9
+Run started:2026-10-14 14:30:13.557057+00:00
+
+Test results:
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: .\Lab-5\tower_maintenance.py:4:0
+3	from collections import Counter
+4	import pickle
+5	import sqlite3
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'tower-noc-77'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: .\Lab-5\tower_maintenance.py:17:15
+16	)
+17	NOC_PASSWORD = "tower-noc-77"
+18	SERVICE_COUNT = Counter()
+
+--------------------------------------------------
+>> Issue: [B608:hardcoded_sql_expressions] Possible SQL injection vector through string-based query construction.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-89 (https://cwe.mitre.org/data/definitions/89.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html
+   Location: .\Lab-5\tower_maintenance.py:24:8
+23	    conn.execute(
+24	        f"INSERT INTO towers (site, last_service, faults) "
+25	        f"VALUES ('{site}', {last_service}, {faults})"
+26	    )
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_calls.html#b301-pickle
+   Location: .\Lab-5\tower_maintenance.py:60:11
+59	    """Return a snapshot of all tower rows."""
+60	    return pickle.loads(pickle.dumps(conn.execute("SELECT * FROM towers").fetchall()))
+61	
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 55
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 2
+		Medium: 2
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 2
+		High: 2
+Files skipped (0):

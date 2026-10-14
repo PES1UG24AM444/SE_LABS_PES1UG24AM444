@@ -1,0 +1,23 @@
+************* Module tower_maintenance_original
+Lab-5\tower_maintenance_original.py:5:0: C0301: Line too long (109/100) (line-too-long)
+Lab-5\tower_maintenance_original.py:11:0: C0301: Line too long (120/100) (line-too-long)
+Lab-5\tower_maintenance_original.py:18:0: C0301: Line too long (101/100) (line-too-long)
+Lab-5\tower_maintenance_original.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Lab-5\tower_maintenance_original.py:7:0: C0103: Constant name "service_count" doesn't conform to UPPER_CASE naming style (invalid-name)
+Lab-5\tower_maintenance_original.py:10:0: C0116: Missing function or method docstring (missing-function-docstring)
+Lab-5\tower_maintenance_original.py:10:0: C0103: Function name "addTower" doesn't conform to snake_case naming style (invalid-name)
+Lab-5\tower_maintenance_original.py:11:17: C0209: Formatting a regular string which could be an f-string (consider-using-f-string)
+Lab-5\tower_maintenance_original.py:15:0: C0116: Missing function or method docstring (missing-function-docstring)
+Lab-5\tower_maintenance_original.py:15:0: C0103: Function name "serviceTower" doesn't conform to snake_case naming style (invalid-name)
+Lab-5\tower_maintenance_original.py:16:4: W0603: Using the global statement (global-statement)
+Lab-5\tower_maintenance_original.py:20:11: W0718: Catching too general exception Exception (broad-exception-caught)
+Lab-5\tower_maintenance_original.py:25:0: C0116: Missing function or method docstring (missing-function-docstring)
+Lab-5\tower_maintenance_original.py:34:0: C0116: Missing function or method docstring (missing-function-docstring)
+Lab-5\tower_maintenance_original.py:34:0: C0103: Function name "riskLevel" doesn't conform to snake_case naming style (invalid-name)
+Lab-5\tower_maintenance_original.py:36:4: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+Lab-5\tower_maintenance_original.py:42:0: C0116: Missing function or method docstring (missing-function-docstring)
+Lab-5\tower_maintenance_original.py:46:0: C0116: Missing function or method docstring (missing-function-docstring)
+
+-----------------------------------
+Your code has been rated at 5.14/10
+
