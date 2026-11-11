@@ -1,0 +1,37 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Pratik Kalloli\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe
+cachedir: .pytest_cache
+hypothesis profile 'default'
+rootdir: C:\Users\Pratik Kalloli\Documents\Codex\2026-11-11\files-mentioned-by-the-user-lab\work\audit_personal_repo\SE_LABS_PES1UG24AM444-main\Lab-6
+plugins: hypothesis-6.170.15, anyio-4.15.1
+collecting ... collected 27 items
+
+test_daycare_fees.py::test_extra_hours_fee_boundaries_and_rates[infant-20-False-0] PASSED [  3%]
+test_daycare_fees.py::test_extra_hours_fee_boundaries_and_rates[toddler-20-False-0] PASSED [  7%]
+test_daycare_fees.py::test_extra_hours_fee_boundaries_and_rates[preschool-30-False-0] PASSED [ 11%]
+test_daycare_fees.py::test_extra_hours_fee_boundaries_and_rates[toddler-30-False-45] PASSED [ 14%]
+test_daycare_fees.py::test_extra_hours_fee_boundaries_and_rates[infant-21-False-14] PASSED [ 18%]
+test_daycare_fees.py::test_extra_hours_fee_boundaries_and_rates[infant-41-False-462] PASSED [ 22%]
+test_daycare_fees.py::test_extra_hours_fee_boundaries_and_rates[preschool-56-False-364] PASSED [ 25%]
+test_daycare_fees.py::test_extra_hours_fee_boundaries_and_rates[toddler-30-True-0] PASSED [ 29%]
+test_daycare_fees.py::test_extra_hours_fee_boundaries_and_rates[infant-21-True-14] PASSED [ 33%]
+test_daycare_fees.py::test_extra_hours_fee_rejects_unknown_age_group[school-age] PASSED [ 37%]
+test_daycare_fees.py::test_extra_hours_fee_rejects_unknown_age_group[] PASSED [ 40%]
+test_daycare_fees.py::test_extra_hours_fee_rejects_unknown_age_group[None] PASSED [ 44%]
+test_daycare_fees.py::test_extra_hours_fee_rejects_negative_hours PASSED [ 48%]
+test_daycare_fees.py::test_enrolment_allowed_decision_boundaries[11-0-True-False] PASSED [ 51%]
+test_daycare_fees.py::test_enrolment_allowed_decision_boundaries[12-0-True-True] PASSED [ 55%]
+test_daycare_fees.py::test_enrolment_allowed_decision_boundaries[5-5-False-False] PASSED [ 59%]
+test_daycare_fees.py::test_enrolment_allowed_decision_boundaries[6-0-False-False] PASSED [ 62%]
+test_daycare_fees.py::test_enrolment_allowed_decision_boundaries[6-1-False-True] PASSED [ 66%]
+test_daycare_fees.py::test_pickup_status_cutoffs[10-False-False-on_time] PASSED [ 70%]
+test_daycare_fees.py::test_pickup_status_cutoffs[9-False-False-late] PASSED [ 74%]
+test_daycare_fees.py::test_pickup_status_cutoffs[-5-False-False-late] PASSED [ 77%]
+test_daycare_fees.py::test_pickup_status_cutoffs[-6-False-False-overdue] PASSED [ 81%]
+test_daycare_fees.py::test_pickup_status_cutoffs[20-True-False-on_time] PASSED [ 85%]
+test_daycare_fees.py::test_pickup_status_cutoffs[10-True-False-late] PASSED [ 88%]
+test_daycare_fees.py::test_pickup_status_cutoffs[20-False-True-on_time] PASSED [ 92%]
+test_daycare_fees.py::test_pickup_status_cutoffs[5-False-True-late] PASSED [ 96%]
+test_daycare_fees.py::test_pickup_status_cutoffs[4-False-True-overdue] PASSED [100%]
+
+============================= 27 passed in 0.22s ==============================
