@@ -1,0 +1,251 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Pratik Kalloli\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe
+cachedir: .pytest_cache
+hypothesis profile 'default'
+rootdir: C:\Users\Pratik Kalloli\Documents\Codex\2026-11-11\files-mentioned-by-the-user-lab\work\lab7-baseline-evidence
+plugins: hypothesis-6.170.15, anyio-4.15.1
+collecting ... collected 55 items
+
+test_processor.py::test_parse_enrolment_valid_generated_values PASSED    [  1%]
+test_processor.py::test_parse_enrolment_rejects_non_text_inputs FAILED   [  3%]
+test_processor.py::test_parse_enrolment_rejects_malformed_generated_text PASSED [  5%]
+test_processor.py::test_parse_enrolment_rejects_invalid_boundaries[] PASSED [  7%]
+test_processor.py::test_parse_enrolment_rejects_invalid_boundaries[toddler] PASSED [  9%]
+test_processor.py::test_parse_enrolment_rejects_invalid_boundaries[toddler:25:extra] PASSED [ 10%]
+test_processor.py::test_parse_enrolment_rejects_invalid_boundaries[:2] FAILED [ 12%]
+test_processor.py::test_parse_enrolment_rejects_invalid_boundaries[toddler:] PASSED [ 14%]
+test_processor.py::test_parse_enrolment_rejects_invalid_boundaries[toddler:abc] PASSED [ 16%]
+test_processor.py::test_parse_enrolment_rejects_invalid_boundaries[toddler:-0.1] FAILED [ 18%]
+test_processor.py::test_parse_enrolment_rejects_invalid_boundaries[toddler:nan] FAILED [ 20%]
+test_processor.py::test_parse_enrolment_rejects_invalid_boundaries[toddler:inf] FAILED [ 21%]
+test_processor.py::test_parse_enrolment_rejects_invalid_boundaries[toddler:1e309] FAILED [ 23%]
+test_processor.py::test_parse_enrolment_whitespace_unicode_decimal_and_large_values[toddler:25-expected0] PASSED [ 25%]
+test_processor.py::test_parse_enrolment_whitespace_unicode_decimal_and_large_values[  caf\xe9  : 2.5 -expected1] PASSED [ 27%]
+test_processor.py::test_parse_enrolment_whitespace_unicode_decimal_and_large_values[infant:0-expected2] PASSED [ 29%]
+test_processor.py::test_parse_enrolment_whitespace_unicode_decimal_and_large_values[group:1e100-expected3] PASSED [ 30%]
+test_processor.py::test_hours_average_generated_nonnegative_integer_lists PASSED [ 32%]
+test_processor.py::test_hours_average_rejects_non_text_inputs FAILED     [ 34%]
+test_processor.py::test_hours_average_rejects_malformed_or_negative_generated_csv PASSED [ 36%]
+test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[] PASSED [ 38%]
+test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[,] PASSED [ 40%]
+test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[1,] PASSED [ 41%]
+test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[,1] PASSED [ 43%]
+test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[1,,2] PASSED [ 45%]
+test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[one,2] PASSED [ 47%]
+test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[1.5,2] PASSED [ 49%]
+test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[-1,2] FAILED [ 50%]
+test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[1,-2] FAILED [ 52%]
+test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[nan] PASSED [ 54%]
+test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[inf] PASSED [ 56%]
+test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[None] FAILED [ 58%]
+test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[20] FAILED [ 60%]
+test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[value13] FAILED [ 61%]
+test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[value14] FAILED [ 63%]
+test_processor.py::test_hours_average_whitespace_unicode_zero_and_large_values PASSED [ 65%]
+test_processor.py::test_payable_fee_generated_nonnegative_finite_values PASSED [ 67%]
+test_processor.py::test_payable_fee_rejects_non_text_inputs FAILED       [ 69%]
+test_processor.py::test_payable_fee_rejects_malformed_generated_text PASSED [ 70%]
+test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[] PASSED [ 72%]
+test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[3000_0] PASSED [ 74%]
+test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[3000|250|10] PASSED [ 76%]
+test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[fee|250] PASSED [ 78%]
+test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[3000|discount] PASSED [ 80%]
+test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[-1|0] FAILED [ 81%]
+test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[3000|-1] FAILED [ 83%]
+test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[nan|0] FAILED [ 85%]
+test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[inf|0] FAILED [ 87%]
+test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[1.7e308|0] FAILED [ 89%]
+test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[0|1e309] FAILED [ 90%]
+test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[None] FAILED [ 92%]
+test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[3000_1] FAILED [ 94%]
+test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[value13] FAILED [ 96%]
+test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[value14] FAILED [ 98%]
+test_processor.py::test_payable_fee_whitespace_unicode_decimal_zero_large_and_floor PASSED [100%]
+
+================================== FAILURES ===================================
+________________ test_parse_enrolment_rejects_non_text_inputs _________________
+test_processor.py:67: in test_parse_enrolment_rejects_non_text_inputs
+    @given(st.one_of(st.none(), st.integers(), st.booleans(), st.lists(st.text()),
+                   ^^^
+test_processor.py:71: in test_parse_enrolment_rejects_non_text_inputs
+    parse_enrolment(value)
+processor.py:2: in parse_enrolment
+    age_group, hours = text.split(':')
+                       ^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'split'
+E   Failing test case: test_parse_enrolment_rejects_non_text_inputs(
+E       value=None,  # or any other generated value
+E   )
+_____________ test_parse_enrolment_rejects_invalid_boundaries[:2] _____________
+test_processor.py:89: in test_parse_enrolment_rejects_invalid_boundaries
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+________ test_parse_enrolment_rejects_invalid_boundaries[toddler:-0.1] ________
+test_processor.py:89: in test_parse_enrolment_rejects_invalid_boundaries
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+________ test_parse_enrolment_rejects_invalid_boundaries[toddler:nan] _________
+test_processor.py:89: in test_parse_enrolment_rejects_invalid_boundaries
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+________ test_parse_enrolment_rejects_invalid_boundaries[toddler:inf] _________
+test_processor.py:89: in test_parse_enrolment_rejects_invalid_boundaries
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_______ test_parse_enrolment_rejects_invalid_boundaries[toddler:1e309] ________
+test_processor.py:89: in test_parse_enrolment_rejects_invalid_boundaries
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_________________ test_hours_average_rejects_non_text_inputs __________________
+test_processor.py:110: in test_hours_average_rejects_non_text_inputs
+    @given(st.one_of(st.none(), st.integers(), st.booleans(), st.lists(st.integers()),
+                   ^^^
+test_processor.py:114: in test_hours_average_rejects_non_text_inputs
+    hours_average(value)
+processor.py:6: in hours_average
+    values = [int(r) for r in hours_csv.split(',')]
+                              ^^^^^^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'split'
+E   Failing test case: test_hours_average_rejects_non_text_inputs(
+E       value=None,  # or any other generated value
+E   )
+________ test_hours_average_rejects_invalid_boundaries_and_types[-1,2] ________
+test_processor.py:132: in test_hours_average_rejects_invalid_boundaries_and_types
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+________ test_hours_average_rejects_invalid_boundaries_and_types[1,-2] ________
+test_processor.py:132: in test_hours_average_rejects_invalid_boundaries_and_types
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+________ test_hours_average_rejects_invalid_boundaries_and_types[None] ________
+test_processor.py:133: in test_hours_average_rejects_invalid_boundaries_and_types
+    hours_average(value)
+processor.py:6: in hours_average
+    values = [int(r) for r in hours_csv.split(',')]
+                              ^^^^^^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'split'
+_________ test_hours_average_rejects_invalid_boundaries_and_types[20] _________
+test_processor.py:133: in test_hours_average_rejects_invalid_boundaries_and_types
+    hours_average(value)
+processor.py:6: in hours_average
+    values = [int(r) for r in hours_csv.split(',')]
+                              ^^^^^^^^^^^^^^^
+E   AttributeError: 'int' object has no attribute 'split'
+______ test_hours_average_rejects_invalid_boundaries_and_types[value13] _______
+test_processor.py:133: in test_hours_average_rejects_invalid_boundaries_and_types
+    hours_average(value)
+processor.py:6: in hours_average
+    values = [int(r) for r in hours_csv.split(',')]
+                              ^^^^^^^^^^^^^^^
+E   AttributeError: 'list' object has no attribute 'split'
+______ test_hours_average_rejects_invalid_boundaries_and_types[value14] _______
+test_processor.py:133: in test_hours_average_rejects_invalid_boundaries_and_types
+    hours_average(value)
+processor.py:6: in hours_average
+    values = [int(r) for r in hours_csv.split(',')]
+                              ^^^^^^^^^^^^^^^
+E   AttributeError: 'dict' object has no attribute 'split'
+__________________ test_payable_fee_rejects_non_text_inputs ___________________
+test_processor.py:154: in test_payable_fee_rejects_non_text_inputs
+    @given(st.one_of(st.none(), st.integers(), st.booleans(), st.lists(st.text()),
+                   ^^^
+test_processor.py:158: in test_payable_fee_rejects_non_text_inputs
+    payable_fee(value)
+processor.py:10: in payable_fee
+    fee, discount = text.split('|')
+                    ^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'split'
+E   Failing test case: test_payable_fee_rejects_non_text_inputs(
+E       value=None,  # or any other generated value
+E   )
+_________ test_payable_fee_rejects_invalid_boundaries_and_types[-1|0] _________
+test_processor.py:177: in test_payable_fee_rejects_invalid_boundaries_and_types
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_______ test_payable_fee_rejects_invalid_boundaries_and_types[3000|-1] ________
+test_processor.py:177: in test_payable_fee_rejects_invalid_boundaries_and_types
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+________ test_payable_fee_rejects_invalid_boundaries_and_types[nan|0] _________
+test_processor.py:177: in test_payable_fee_rejects_invalid_boundaries_and_types
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+________ test_payable_fee_rejects_invalid_boundaries_and_types[inf|0] _________
+test_processor.py:177: in test_payable_fee_rejects_invalid_boundaries_and_types
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+______ test_payable_fee_rejects_invalid_boundaries_and_types[1.7e308|0] _______
+test_processor.py:177: in test_payable_fee_rejects_invalid_boundaries_and_types
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_______ test_payable_fee_rejects_invalid_boundaries_and_types[0|1e309] ________
+test_processor.py:177: in test_payable_fee_rejects_invalid_boundaries_and_types
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+_________ test_payable_fee_rejects_invalid_boundaries_and_types[None] _________
+test_processor.py:178: in test_payable_fee_rejects_invalid_boundaries_and_types
+    payable_fee(value)
+processor.py:10: in payable_fee
+    fee, discount = text.split('|')
+                    ^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'split'
+________ test_payable_fee_rejects_invalid_boundaries_and_types[3000_1] ________
+test_processor.py:178: in test_payable_fee_rejects_invalid_boundaries_and_types
+    payable_fee(value)
+processor.py:10: in payable_fee
+    fee, discount = text.split('|')
+                    ^^^^^^^^^^
+E   AttributeError: 'int' object has no attribute 'split'
+_______ test_payable_fee_rejects_invalid_boundaries_and_types[value13] ________
+test_processor.py:178: in test_payable_fee_rejects_invalid_boundaries_and_types
+    payable_fee(value)
+processor.py:10: in payable_fee
+    fee, discount = text.split('|')
+                    ^^^^^^^^^^
+E   AttributeError: 'list' object has no attribute 'split'
+_______ test_payable_fee_rejects_invalid_boundaries_and_types[value14] ________
+test_processor.py:178: in test_payable_fee_rejects_invalid_boundaries_and_types
+    payable_fee(value)
+processor.py:10: in payable_fee
+    fee, discount = text.split('|')
+                    ^^^^^^^^^^
+E   AttributeError: 'dict' object has no attribute 'split'
+=========================== short test summary info ===========================
+FAILED test_processor.py::test_parse_enrolment_rejects_non_text_inputs - Attr...
+FAILED test_processor.py::test_parse_enrolment_rejects_invalid_boundaries[:2]
+FAILED test_processor.py::test_parse_enrolment_rejects_invalid_boundaries[toddler:-0.1]
+FAILED test_processor.py::test_parse_enrolment_rejects_invalid_boundaries[toddler:nan]
+FAILED test_processor.py::test_parse_enrolment_rejects_invalid_boundaries[toddler:inf]
+FAILED test_processor.py::test_parse_enrolment_rejects_invalid_boundaries[toddler:1e309]
+FAILED test_processor.py::test_hours_average_rejects_non_text_inputs - Attrib...
+FAILED test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[-1,2]
+FAILED test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[1,-2]
+FAILED test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[None]
+FAILED test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[20]
+FAILED test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[value13]
+FAILED test_processor.py::test_hours_average_rejects_invalid_boundaries_and_types[value14]
+FAILED test_processor.py::test_payable_fee_rejects_non_text_inputs - Attribut...
+FAILED test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[-1|0]
+FAILED test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[3000|-1]
+FAILED test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[nan|0]
+FAILED test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[inf|0]
+FAILED test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[1.7e308|0]
+FAILED test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[0|1e309]
+FAILED test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[None]
+FAILED test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[3000_1]
+FAILED test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[value13]
+FAILED test_processor.py::test_payable_fee_rejects_invalid_boundaries_and_types[value14]
+======================== 24 failed, 31 passed in 1.41s ========================

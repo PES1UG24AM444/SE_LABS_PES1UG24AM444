@@ -1,0 +1,8 @@
+==== Running parse_enrolment ====
+Enter age group:hours (e.g. toddler:25): Age Group and Hours: ('Toddler', 25.0)
+
+==== Running hours_average ====
+Enter weekly hours as CSV (e.g. 20,25,30): Average Hours: 25
+
+==== Running payable_fee ====
+Enter fee|discount (e.g. 3000|250): Payable Fee: 3290.0
